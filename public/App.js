@@ -15,4 +15,8 @@ const App = () => {
       <Experience />
       <Skills />
       <Contact />
+    </>
+  );
+};
 
+export default App;
