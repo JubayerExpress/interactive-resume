@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -8,40 +8,36 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
   }
 
-  h1, h2, h3 {
+  h1, h2 {
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
   }
 
-  a {
-    color: #007bff;
-    text-decoration: none;
+  p {
+    margin-bottom: 20px;
   }
 
-  a:hover {
-    text-decoration: underline;
+  ul {
+    list-style-type: none;
+    margin-bottom: 20px;
   }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .section {
-    padding: 4rem 0;
-  }
-
-  .center {
+  section {
+    padding: 40px;
     text-align: center;
+  }
+
+  .header {
+    padding: 40px;
+    background-color: #222;
+    color: white;
   }
 `;
 
-export default GlobalStyle;
-
+export default GlobalStyles;
