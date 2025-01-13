@@ -1,22 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const ContactSection = styled.section`
-  padding: 4rem 0;
-  text-align: center;
-`;
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
 
 const Contact = () => {
+  useEffect(() => {
+    gsap.from('.contact', { duration: 1, y: 100, opacity: 0, delay: 2 });
+  }, []);
+
   return (
-    <ContactSection id="contact">
-      <div className="container">
-        <h2>Contact Me</h2>
-        <p>Email: johndoe@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-      </div>
-    </ContactSection>
+    <section className="contact">
+      <h2>Contact</h2>
+      <p>Email: your.email@example.com</p>
+    </section>
   );
 };
 
 export default Contact;
-
