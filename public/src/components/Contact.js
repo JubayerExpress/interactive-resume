@@ -1,17 +1,25 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
+import React from 'react';
+import styled from 'styled-components';
 
 const Contact = () => {
-  useEffect(() => {
-    gsap.from('.contact', { duration: 1, y: 100, opacity: 0, delay: 2 });
-  }, []);
-
   return (
-    <section className="contact">
+    <ContactSection>
       <h2>Contact</h2>
-      <p>Email: your.email@example.com</p>
-    </section>
+      <p>Email: john.doe@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </ContactSection>
   );
 };
+
+const ContactSection = styled.div`
+  margin: 40px;
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+  }
+`;
 
 export default Contact;
