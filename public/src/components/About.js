@@ -1,19 +1,27 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
+import React from 'react';
+import styled from 'styled-components';
 
 const About = () => {
-  useEffect(() => {
-    gsap.from('.about', { duration: 1, opacity: 0, delay: 0.5 });
-  }, []);
-
   return (
-    <section className="about">
+    <AboutSection>
       <h2>About Me</h2>
       <p>
-        I am a passionate developer with experience in building modern web applications using React, GSAP, and Styled Components.
+        I am a full-stack developer with a passion for building interactive web applications and beautiful user interfaces. 
+        I love working with the latest web technologies and constantly improving my skills.
       </p>
-    </section>
+    </AboutSection>
   );
 };
+
+const AboutSection = styled.div`
+  margin: 40px;
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.1rem;
+    color: #444;
+  }
+`;
 
 export default About;
