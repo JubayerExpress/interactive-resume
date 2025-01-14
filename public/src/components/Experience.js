@@ -1,20 +1,35 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
+import React from 'react';
+import styled from 'styled-components';
 
 const Experience = () => {
-  useEffect(() => {
-    gsap.from('.experience', { duration: 1, x: -200, opacity: 0, delay: 1 });
-  }, []);
-
   return (
-    <section className="experience">
+    <ExperienceSection>
       <h2>Experience</h2>
       <ul>
-        <li>Software Developer at XYZ - 2020 to Present</li>
-        <li>Front-end Developer at ABC - 2018 to 2020</li>
+        <li>
+          <strong>Company XYZ</strong> – Full Stack Developer (2021 - Present)
+        </li>
+        <li>
+          <strong>Company ABC</strong> – Frontend Developer (2019 - 2021)
+        </li>
       </ul>
-    </section>
+    </ExperienceSection>
   );
 };
+
+const ExperienceSection = styled.div`
+  margin: 40px;
+  h2 {
+    font-size: 2rem;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+`;
 
 export default Experience;
