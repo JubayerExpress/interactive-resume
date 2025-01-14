@@ -1,22 +1,33 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
+import React from 'react';
+import styled from 'styled-components';
 
 const Skills = () => {
-  useEffect(() => {
-    gsap.from('.skills', { duration: 1, x: 200, opacity: 0, delay: 1.5 });
-  }, []);
-
   return (
-    <section className="skills">
+    <SkillsSection>
       <h2>Skills</h2>
       <ul>
-        <li>JavaScript</li>
         <li>React</li>
-        <li>GSAP</li>
-        <li>Styled Components</li>
+        <li>Node.js</li>
+        <li>JavaScript</li>
+        <li>CSS</li>
       </ul>
-    </section>
+    </SkillsSection>
   );
 };
+
+const SkillsSection = styled.div`
+  margin: 40px;
+  h2 {
+    font-size: 2rem;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+  }
+`;
 
 export default Skills;
